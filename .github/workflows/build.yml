@@ -1,0 +1,57 @@
+name: Build and Release Artale-400-
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Build executable
+      run: |
+        python -m PyInstaller --name "女神400速解小工具" --windowed --onefile --add-data "image.png;." main.py
+        
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: dist/女神400速解小工具.exe
+        body: |
+          ## 更新內容
+          
+          ### 新功能
+          - 動態狀態指示器
+          - 優化視窗拖動體驗
+          - 改善設定保存機制
+          
+          ### 修復
+          - 修復透明度調整問題
+          - 改善記憶體使用效率
+          
+                     ## 下載說明
+           1. 下載 `女神400速解小工具.exe`
+          2. 雙擊執行即可使用
+          3. 不需要安裝 Python 或其他依賴
+          
+          ## 系統需求
+          - Windows 10/11
+          - 不需要額外安裝任何軟體
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
