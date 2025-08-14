@@ -26,7 +26,7 @@
 
 ### 方法一：使用預編譯執行檔（推薦）
 
-1. 前往 [Releases](https://github.com/MKChou/Artale-400-/releases) 頁面
+1. 前往 [Releases](https://github.com/MKChou/Artale400/releases) 頁面
 2. 下載最新版本的 `女神400速解小工具.exe`
 3. 雙擊執行檔即可使用
 
@@ -42,8 +42,8 @@ pip install PyQt5 pyinstaller
 #### 編譯步驟
 ```bash
 # 1. 克隆專案
-git clone https://github.com/MKChou/Artale-400-.git
-cd Artale-400-
+git clone https://github.com/MKChou/Artale400.git
+cd Artale400
 
 # 2. 執行應用程式
 python main.py

@@ -76,13 +76,13 @@
    ```
 
 3. **創建 GitHub 倉庫**：
-   - 倉庫名稱：`女神400速解小工具`
+   - 倉庫名稱：`Artale400`
    - 描述：一個基於 PyQt5 開發的桌面應用程式，提供快速查表功能
    - Topics：`python`, `pyqt5`, `desktop-app`, `windows`, `gui`
 
 4. **上傳到 GitHub**：
    ```bash
-   git remote add origin https://github.com/你的用戶名/女神400速解小工具.git
+   git remote add origin https://github.com/你的用戶名/Artale400.git
    git branch -M main
    git push -u origin main
    ```

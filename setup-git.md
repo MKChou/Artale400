@@ -22,14 +22,14 @@ git commit -m "Initial commit: 女神400速解小工具 v1.2.1"
 ### 4. 在 GitHub 上創建新倉庫
 1. 前往 [GitHub](https://github.com)
 2. 點擊 "New repository"
-3. 倉庫名稱建議：`女神400速解小工具` 或 `goddess-400-tool`
+3. 倉庫名稱建議：`Artale400` 或 `goddess-400-tool`
 4. 選擇 "Public" 或 "Private"
 5. **不要**勾選 "Initialize this repository with a README"
 6. 點擊 "Create repository"
 
 ### 5. 連接本地倉庫到 GitHub
 ```bash
-git remote add origin https://github.com/你的用戶名/女神400速解小工具.git
+git remote add origin https://github.com/你的用戶名/Artale400.git
 git branch -M main
 git push -u origin main
 ```

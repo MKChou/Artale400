@@ -1,4 +1,4 @@
-name: Build and Release Artale-400-
+name: Build and Release Artale400
 
 on:
   push:
